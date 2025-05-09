@@ -244,9 +244,9 @@ export default function ServicesPage() {
               {t("services.title")}
             </h1>
             <p className="text-lg md:text-xl text-white/80 mb-8">{t("services.subtitle")}</p>
-            <Button size="lg" className="bg-white text-purple-700 hover:bg-white/90">
+            {/* <Button size="lg" className="bg-white text-purple-700 hover:bg-white/90">
               {t("services.hero.cta")}
-            </Button>
+            </Button> */}
           </motion.div>
         </div>
       </section>
@@ -289,7 +289,7 @@ export default function ServicesPage() {
               </TabsList>
             </div>
 
-            {services.map((service) => (
+            {services.map((service,i) => (
               <TabsContent
                 key={service.id}
                 value={service.id}
@@ -314,9 +314,9 @@ export default function ServicesPage() {
                     </div>
 
                     <div className="mt-8">
-                      <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white">
+                      {/* <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white">
                         {t("services.learnMore")} <ArrowRight className="ml-2 h-4 w-4" />
-                      </Button>
+                      </Button> */}
                     </div>
                   </motion.div>
 
@@ -328,7 +328,7 @@ export default function ServicesPage() {
                   >
                     <div className="relative w-full h-[400px] snake-border rounded-2xl overflow-hidden">
                       <Image
-                        src="/placeholder.svg?height=400&width=600"
+                        src={`${i+1}.png` || `${i+1}.jpg`}
                         alt={t(service.titleKey)}
                         fill
                         className="object-cover"
@@ -437,9 +437,9 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-
+ 
       {/* Case Studies */}
-      <section ref={casesRef} className="py-20 md:py-32 bg-muted/30 relative overflow-hidden">
+      {/* <section ref={casesRef} className="py-20 md:py-32 bg-muted/30 relative overflow-hidden">
         <div className="absolute inset-0 geometric-pattern opacity-10"></div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -497,10 +497,10 @@ export default function ServicesPage() {
             </Button>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Pricing Section */}
-      <section ref={pricingRef} className="py-20 md:py-32 relative overflow-hidden">
+      <section ref={pricingRef} className="py-20 md:py-32 relative hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -569,7 +569,10 @@ export default function ServicesPage() {
             </Button>
           </div>
         </div>
-      </section>
+      </section> 
+
+
+     
 
       {/* CTA Section */}
       <section className="py-20 md:py-32 relative overflow-hidden animated-bg">
@@ -582,12 +585,14 @@ export default function ServicesPage() {
             </h2>
             <p className="text-lg md:text-xl text-white/80 mb-8">{t("services.ctaSubtitle")}</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href={'/contact'}>
               <Button size="lg" className="bg-white text-purple-700 hover:bg-white/90">
                 {t("services.cta.scheduleConsultation")}
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+              </Link>
+              {/* <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
                 {t("services.cta.viewPortfolio")}
-              </Button>
+              </Button> */}
             </div>
           </div>
         </div>

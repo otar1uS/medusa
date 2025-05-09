@@ -20,7 +20,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-muted-foreground text-sm max-w-xs">{t("footer.companyInfo")}</p>
-            <div className="flex space-x-4">
+            {/* <div className="flex space-x-4">
               <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
                 <Facebook size={20} />
                 <span className="sr-only">Facebook</span>
@@ -41,7 +41,7 @@ export default function Footer() {
                 <Github size={20} />
                 <span className="sr-only">GitHub</span>
               </Link>
-            </div>
+            </div> */}
           </div>
 
           {/* Services */}
@@ -119,14 +119,14 @@ export default function Footer() {
           <p className="text-muted-foreground text-sm">
             &copy; {currentYear} Medusa. {t("footer.rights")}
           </p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
+          {/* <div className="flex space-x-6 mt-4 md:mt-0">
             <Link href="/privacy" className="text-muted-foreground hover:text-primary transition-colors text-sm">
               {t("footer.privacy")}
             </Link>
             <Link href="/terms" className="text-muted-foreground hover:text-primary transition-colors text-sm">
               {t("footer.terms")}
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>

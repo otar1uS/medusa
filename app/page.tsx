@@ -126,19 +126,23 @@ export default function Home() {
                 {t("hero.subtitle")}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <Link href={'/services'}>
                 <Button
                   size="lg"
                   className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white"
-                >
+                  >
                   {t("hero.cta")} <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
+                  </Link>
+                <Link href={'/contact'}>
                 <Button
                   size="lg"
                   variant="outline"
                   className="border-purple-500 text-foreground hover:bg-purple-500/10"
-                >
+                  >
                   {t("hero.secondary")}
                 </Button>
+                  </Link>
               </div>
             </motion.div>
 
@@ -150,7 +154,7 @@ export default function Home() {
             >
               <div className="relative w-full h-[400px] lg:h-[500px] snake-border rounded-2xl overflow-hidden glow">
                 <Image
-                  src="/placeholder.svg?height=500&width=500"
+                  src="/medusa-main.png"
                   alt="Medusa Software Development"
                   fill
                   className="object-cover"
@@ -321,7 +325,7 @@ export default function Home() {
               <div className="relative">
                 <div className="relative w-full h-[400px] lg:h-[500px] snake-border rounded-2xl overflow-hidden">
                   <Image
-                    src="/placeholder.svg?height=500&width=500"
+                    src="/handshake.png"
                     alt={t("home.features.title")}
                     fill
                     className="object-cover"
@@ -355,12 +359,14 @@ export default function Home() {
               {t("home.cta.subtitle")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href={'/contact'}>
               <Button size="lg" className="bg-white text-purple-700 hover:bg-white/90">
                 {t("home.cta.getStarted")}
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+              </Link>
+              {/* <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
                 {t("home.cta.learnMore")}
-              </Button>
+              </Button> */}
             </div>
           </motion.div>
         </div>

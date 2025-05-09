@@ -122,7 +122,7 @@ export default function ContactPage() {
                     required
                   />
                 </div>
-                <div className="flex items-center space-x-2">
+                {/* <div className="flex items-center space-x-2">
                   <input
                     type="checkbox"
                     id="privacy"
@@ -135,7 +135,7 @@ export default function ContactPage() {
                       {t("footer.privacy")}
                     </a>
                   </label>
-                </div>
+                </div> */}
                 <Button
                   type="submit"
                   className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white"
@@ -221,11 +221,11 @@ export default function ContactPage() {
               </div>
 
               {/* Map Placeholder */}
-              <div className="relative w-full h-64 rounded-xl overflow-hidden border border-border/50">
+              {/* <div className="relative w-full h-64 rounded-xl overflow-hidden border border-border/50">
                 <div className="absolute inset-0 bg-muted flex items-center justify-center">
                   <p className="text-muted-foreground">{t("contact.mapPlaceholder")}</p>
                 </div>
-              </div>
+              </div> */}
             </motion.div>
           </div>
         </div>
@@ -280,9 +280,9 @@ export default function ContactPage() {
               {t("contact.ctaTitle")}
             </h2>
             <p className="text-lg md:text-xl text-white/80 mb-8">{t("contact.ctaSubtitle")}</p>
-            <Button size="lg" className="bg-white text-purple-700 hover:bg-white/90">
+            {/* <Button size="lg" className="bg-white text-purple-700 hover:bg-white/90">
               {t("contact.scheduleCall")}
-            </Button>
+            </Button> */}
           </div>
         </motion.div>
       </section>

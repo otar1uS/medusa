@@ -6,6 +6,7 @@ import { motion, useInView } from "framer-motion"
 import { ArrowRight, CheckCircle2, Award, Users, Target, Lightbulb } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useLanguage } from "@/components/language-provider"
+import Link from "next/link"
 
 export default function AboutPage() {
   const { t } = useLanguage()
@@ -141,7 +142,7 @@ export default function AboutPage() {
       {/* Our Story Section */}
       <section ref={storyRef} className="py-20 md:py-32 relative overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid  gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={isStoryInView ? { opacity: 1, x: 0 } : {}}
@@ -161,9 +162,9 @@ export default function AboutPage() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="relative"
             >
-              <div className="relative w-full h-[400px] snake-border rounded-2xl overflow-hidden">
+              {/* <div className="relative w-full h-[400px] snake-border rounded-2xl overflow-hidden">
                 <Image src="/placeholder.svg?height=400&width=600" alt={t("about.story")} fill className="object-cover" />
-              </div>
+              </div> */}
 
               {/* Floating elements */}
               <div className="absolute -top-10 -right-10 w-20 h-20 bg-purple-500/20 rounded-full blur-xl" />
@@ -249,7 +250,7 @@ export default function AboutPage() {
       </section>
 
       {/* Company Timeline */}
-      <section ref={timelineRef} className="py-20 md:py-32 bg-muted/30 relative overflow-hidden">
+      <section ref={timelineRef} className="py-20 md:py-32 bg-muted/30 relative hidden">
         <div className="absolute inset-0 geometric-pattern opacity-10"></div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -303,7 +304,7 @@ export default function AboutPage() {
       </section>
 
       {/* Team Section */}
-      <section ref={teamRef} className="py-20 md:py-32 relative overflow-hidden">
+      <section ref={teamRef} className="py-20 md:py-32 relative hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -346,7 +347,7 @@ export default function AboutPage() {
       </section>
 
       {/* Join Our Team */}
-      <section ref={joinTeamRef} className="py-20 md:py-32 bg-muted/30 relative overflow-hidden">
+      <section ref={joinTeamRef} className="py-20 md:py-32 bg-muted/30 relative hidden">
         <div className="absolute inset-0 geometric-pattern opacity-10"></div>
 
         <motion.div
@@ -385,9 +386,11 @@ export default function AboutPage() {
               {t("about.ctaTitle")}
             </h2>
             <p className="text-lg md:text-xl text-white/80 mb-8">{t("about.ctaSubtitle")}</p>
+            <Link href={'/contact'}>
             <Button size="lg" className="bg-white text-purple-700 hover:bg-white/90">
               {t("about.cta.getInTouch")} <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
+            </Link>
           </div>
         </motion.div>
       </section>

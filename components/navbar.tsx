@@ -96,9 +96,13 @@ export default function Navbar() {
             </DropdownMenu>
 
             {/* CTA Button */}
+                <Link href={'/services'}>
             <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white">
+             
               {t("nav.getStarted")}
             </Button>
+                </Link>
+
           </div>
 
           {/* Mobile Menu Button */}
@@ -166,9 +170,11 @@ export default function Navbar() {
 
               {/* Mobile CTA */}
               <div className="px-3 py-2">
+                <Link href={'/services'}>
                 <Button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white">
                   {t("nav.getStarted")}
                 </Button>
+                </Link>
               </div>
             </div>
           </motion.div>
